@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ### README.md
 
@@ -89,3 +90,6 @@ Thank you for visiting my portfolio!
 4. **Installation steps**: Adjust these instructions if there are any additional steps required to run the project locally (like installing dependencies). 
 
 This `README.md` will give viewers a clear overview of your portfolio site and how to use it.
+=======
+# Portfolio
+>>>>>>> 94135e5841c9633c99181cd2e76933113069786e
