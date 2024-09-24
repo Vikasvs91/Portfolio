@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+ 
+
+
+body{
+    color:whitesmoke;
+    background-color:black;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
+    height: 100%;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+.h-div>ul ,.h-ol{
+    display: flex;
+    width: 570px;
+    list-style: none;
+    margin-left: 10%;
+    /* border: 2px solid white; */
+    
+}
+.h-div>ul {
+    margin-left: 100%;
+}
+.h-ol li {
+    padding: 0;
+    margin: 0;
+    /* border: 2px solid white; */
+}
+.h-ol :hover{
+    color: orangered;
+    text-shadow: 0px 0px 10px orangered ;
+    margin: 0px 0px 10px 0px;
+    transition: 0.6s;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%; 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* border: 2px solid white; */
+}
+
+a{
+   text-decoration: none;
+   position: sticky;
+   color: whitesmoke;
+   width: 100%;
+   padding: 10%;
+   font-size: 20px;
+}
+
+.intro{
+    display: flex;   
+    justify-content: space-around;
+    align-items: center;       
+    padding-left: 10%;
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: auto auto ;
+    
+}
+.intro-item2{
+   
+    margin-top: 15%;
+    width: auto;
+    left: 0;
+    margin-right: 10%;
+    bottom: 10%;
+}
+
+
+
+.intro-item1 ,.intro-item2{
+    
+    height: auto;
+   
+}
+.intro-item1{
+    width: 70%;
+}
+.name{
+    color: orangered;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    
+}
+.intro-item1-b-b2{
+    align-items: start;
+    padding-left: 0%;
+    font-weight: 200;
+    font-size: 18px;
+    padding-bottom: 30px;
+   
+}
+.intro-item1-c{
+    border: 1px ;
+    border-radius:20%;
+    padding: 15px;
+    background-color: orangered;
+    transition: transform 1s ;
+}
+.hoverintro{
+    transition: transform 1s ;
+}
+.hoverintro:hover{
+    transform: translateY(-10px);
+    transition: transform 1s ;
+}
+.intro-item1-c:hover{
+    color: black;
+    
+    
+}
+.about{
+    width: 12%;
+    border-bottom: 5px solid orangered;
+}
+.line{
+    color: black;
+    width: 20%;
+    border-top: 5px solid orangered;  
+}
+.h12{
+    padding-left: 2%;
+    letter-spacing: 1px;
+}
+.tabl1{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 10%;
+    padding-top: 5%;
+    row-gap: 20px;
+    font-size: 20px;
+    
+}
+.cursor{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+    transition: transform 0.1s ease-out, left 0.05s ease-out, top 0.05s ease-out;
+    transform: translate(-50% , -50%);
+    pointer-events:none;
+    mix-blend-mode:difference;
+    z-index: 1000;
+}
+.intro-item1-b-b2:hover~.cursor{
+    transform: scale(6);
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: orangered; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: darkorange; 
+  }
+
+.box{
+    /* border: 1px solid wheat; */
+    width: 69%;
+    border-bottom: 0.5px solid orangered;
+
+}
+.tabl1 b{
+    color: orangered;
+}
+.details{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    height: auto;
+    padding: 6%;
+    
+   
+    -ms-text-kashida-space: 10%;
+}
+.details h2{
+    color: darkorange;
+}
+.education,.intership{
+   
+    box-shadow: 0px 0px 10px  orangered;
+    border-radius: 20px;
+    padding: 4%;
+    height: auto;
+    width: 80%;
+    transition: transform 0.6s ;
+}
+.education:hover,.intership:hover{
+    transform: translateY(-30px);
+    transition: transform 0.6s ;
+    box-shadow: 0px 0px 20px  orangered;
+}
+.edu1,.edu2,.edu3{
+    padding-left: 2%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+    border-left: 4px solid orangered;
+
+
+}
+.dethead{
+    color: orangered;
+    font-size: 18px;
+    padding-bottom: 0.5rem;
+}
+.info{
+      
+      padding: 0.3rem 0;
+}
+.intern{
+    border-left: 4px solid orangered;
+    border-radius: 20px;
+    padding-left: 2%;
+}
+.skill>ul,.otherskill>ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    transition: 2s;
+    letter-spacing: 4px;
+    margin: 5%;
+}
+
+
+
+.text1,.text2,.text3,.text4,.text5,.text6,.text7,
+.text8,.text9,.text10,.text11,.text12,.text13,.text14{
+    display: block;
+    font-size: 25px;
+    padding: 30px;
+    transition: transform 0.6s ;
+    
+    
+}
+.text1:hover,.text2:hover,.text3:hover,.text4:hover,.text5:hover
+,.text6:hover,.text7:hover,.text8:hover,.text9:hover,.text10:hover
+,.text11:hover,.text12:hover,.text13:hover,.text14:hover{
+    
+    color: orangered;
+    transform: translateY(-10px);
+    transition: transform 0.6s ;
+    
+    text-shadow: 0px 0px 10px orangered ;
+    
+}
+.project{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns:33% 33% 33% ;
+    padding: 0px;
+    row-gap: 30px;
+    justify-content: center;
+    align-content: center;
+
+}
+.project-card   {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background-color: black;
+    box-shadow: 0px 0px 10px rgb(38, 37, 37);
+    border-radius: 8px;
+    transition: transform 0.5s ;
+    text-align: left;
+}
+.project-card:hover {
+    transform: translatey(-10px);
+    box-shadow: 0px 0px 20px rgb(38, 37, 37);
+    transition: transform 0.5s ;
+}
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+}
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.project-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+.project-card a {
+    display: inline-block;
+    text-decoration: none;
+    color: orangered;
+    font-weight: bold;
+    border: 1px solid orangered;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project-card a:hover {
+    background-color: orangered;
+    backdrop-filter: blur(20px);
+    color: whitesmoke;
+}
+
+.intro-item2 {
+    position: relative;
+    max-width: 50%;
+}
+.vikaspic{
+    background-color: red;
+    width: 400px;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px orangered;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    margin-top: 0;
+    opacity: 0.9s;
+}
+.vikaspic:hover{
+    transform: scale(1.05);
+    opacity: 1s;
+    /* box-shadow: 0px 0px 20px whitesmoke; */
+    /* margin: 1px 2px 3px 4px ; */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    right: 0;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 400px;
+    height: 0;
+    transition: .5s ease;
+  }
+.intro-item2:hover .overlay {
+    height: 100%;
+    box-shadow: 0px 0px 20px orange;
+}
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+  }
+
+.contact{
+    margin: 2%;
+    justify-content: center;
+    text-align: center;
+}
+.row2{
+    margin: 90px 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    row-gap: 20px;
+    
+}
+.contacthead{
+    color: orangered;
+}
+.contactinfo{
+    display: grid;
+    row-gap: 15px;
+}
+.contactex{
+    font-size: 20px;
+    font-weight:bold;
+}
+/* Contact section */
+.form {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+textarea {
+    height: 150px;
+}
+
+.submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit:hover {
+    background-color: #45a049;
+}
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+
+.social {
+    display: flex;
+    margin-left: 49%;
+    width: 0px;
+    justify-content: center;
+   
+}
+
+.social a {
+    color: #fff;
+    margin: 0 30px;
+}
+
+.copywrite {
+    margin-top: 1rem;
+    
+}
+
+.Arrow{
+    margin-left: 85%;
+    transition: .5s ease;
+}
+.Arrow:hover {
+    color: orangered;
+}
+
+
+@media (max-width: 1024px) {
+    .intro {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .intro-item1, .intro-item2 {
+        width: 100%;
+        padding: 0;
+        
+    }
+    .intro-item2{
+        margin-top: 30%;
+        margin-left: 10%;
+    }
+
+    .header ,.h-div ,.h-ol {
+        margin-left: 10%;
+        width: 100%;
+    }
+
+    .about, .line {
+        width: 50%;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+        padding: 10%;
+    }
+
+    .education, .intership {
+        width: 100%;
+        padding: 5%;
+        margin-bottom: 20px;
+    }
+    .skill>ul,.otherskill>ul{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+
+    .project {
+        grid-template-columns: 1fr 1fr;
+        margin-top: 20px;
+    }
+
+    .form {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+       width: 50px;
+       height: 200px;
+       background-color:whitesmoke;
+       border-radius: 10px;
+       
+    }
+    .header:hover {
+        width: 100px;
+        height: auto;
+        /* color: wheat; */
+        background-color: black;
+    }
+
+    .h-div > ul, .h-ol {
+        display: grid;
+        margin-top: 10px; 
+        margin-right: 50%;
+        width: 0%; 
+    }
+    
+
+    
+
+    a {
+        font-size: 18px; /* Smaller font size for mobile */
+    }
+    .footer{
+        width: 69%;
+    }
+    .social{
+        width: 20px;
+        /* border: 2px solid white; */
+    }
+    .social>a {
+        margin: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        margin-left: 0;
+        grid-template-columns: 1fr; /* Stack elements */
+        text-align: center; /* Center header items */
+        font-size: 2px;
+    }
+
+    .h-div > ul, .h-ol {
+        justify-content: center; /* Center navigation */
+    }
+
+    .intro-item1, .intro-item2 {
+        width: 100%;
+        padding: 10px; /* Add some padding */
+    }
+
+    .intro-item2 {
+        margin-top: 20%; /* Adjust margin for better spacing */
+    }
+
+    .about, .line, .details, .education, .intership, .project, .form {
+        padding: 5%; /* Add some padding */
+    }
+
+    .project {
+        margin-left: 0; /* Reset margin */
+        grid-template-columns: 1fr; /* Stack project cards */
+    }
+
+    .project-card {
+        width: 100%; /* Full width for cards */
+        margin: 10px 0; /* Space between cards */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .social a {
+        margin: 0 5px; /* Adjust margin for smaller screens */
+        font-size: 18px; /* Slightly smaller text */
+    }
+
+    /* Reduce font size for better readability on small screens */
+    .text1, .text2, .text3, .text4, .text5, .text6, .text7,
+    .text8, .text9, .text10, .text11, .text12, .text13, .text14 {
+        font-size: 20px; /* Adjust font size */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .submit {
+        width: 100%; /* Full width for buttons */
+        font-size: 18px; /* Larger touch target */
+        padding: 15px 0; /* Adjust padding */
+    }
+
+    /* Adjust cursor styles to ensure they remain effective */
+    .cursor {
+        width: 15px;
+        height: 15px;
+    }
+
+    .cursor:hover {
+        transform: scale(5); /* Scale cursor on hover */
+    }
+}
+
+
+
+
+
+
