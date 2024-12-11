@@ -446,7 +446,7 @@ textarea {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     height: auto;
     bottom: 0;
