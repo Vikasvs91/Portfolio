@@ -103,6 +103,11 @@ a{
     animation: typing 2s steps(20) infinite alternate-reverse;
     
 }
+@keyframes typing {
+     from{
+        width:0ch;  
+  }
+}
 .intro-item1-b-b2{
     align-items: start;
     padding-left: 0%;
@@ -482,11 +487,7 @@ textarea {
     color: orangered;
 }
 
-@keyframes typing{
-     from{
-        width:0ch;  
-  }
-}
+
 
 @media (max-width: 1024px) {
     .intro {
