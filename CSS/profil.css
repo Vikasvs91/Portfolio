@@ -482,7 +482,7 @@ textarea {
     color: orangered;
 }
 
-@keyframes{
+@keyframes typing{
      from{
         width:0ch;  
   }
