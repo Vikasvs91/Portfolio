@@ -95,18 +95,24 @@ a{
     width: 70%;
 }
 .name{
-    color: orangered;
+ color: orangered;
     font-family: 'Courier New', Courier, monospace;
-    width:20ch;
-    text-wrap:nowrap;
+    width:0ch;
+    display:inline-block;
+    white-space:nowrap;
     overflow:hidden;
+    border-right:9px solid orangered;
     animation: typing 2s steps(20) infinite alternate-reverse;
+    
     
 }
 @keyframes typing {
      from{
-        width:0ch;  
-  }
+        width:0ch;
+    }
+    to{
+        width:23ch;
+    }
 }
 .intro-item1-b-b2{
     align-items: start;
