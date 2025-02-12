@@ -97,6 +97,10 @@ a{
 .name{
     color: orangered;
     font-family: 'Courier New', Courier, monospace;
+    width:20ch;
+    text-wrap:nowrap;
+    overflow:hidden;
+    animation: typing 2s steps(20) infinite alternate-reverse;
     
 }
 .intro-item1-b-b2{
@@ -478,6 +482,11 @@ textarea {
     color: orangered;
 }
 
+@keyframes{
+     from{
+        width:0ch;  
+  }
+}
 
 @media (max-width: 1024px) {
     .intro {
