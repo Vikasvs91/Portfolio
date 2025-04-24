@@ -163,17 +163,22 @@ a{
     font-size: 20px;
     
 }
-.cursor{
+:root {
+  --cursor-size: 20px;
+}
+.cursor {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: var(--cursor-size);
+    height: var(--cursor-size);
     border-radius: 50%;
     background-color: whitesmoke;
-    transition: transform 0.1s ease-out, left 0.05s ease-out, top 0.05s ease-out;
-    transform: translate(-50% , -50%);
-    pointer-events:none;
-    mix-blend-mode:difference;
+    transition: transform 0.1s ease-out, left 0.1s ease-out, top 0.1s ease-out;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
     z-index: 1000;
+    will-change: transform, left, top;
+    box-shadow: 0 0 10px rgba(255,255,255,0.15);
 }
 .intro-item1-b-b2:hover~.cursor{
     transform: scale(6);
