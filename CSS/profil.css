@@ -178,10 +178,11 @@ a{
     mix-blend-mode: difference;
     z-index: 1000;
     will-change: transform, left, top;
-    box-shadow: 0 0 10px rgba(255,255,255,0.15);
+    box-shadow:0 0 15px white;
 }
 .intro-item1-b-b2:hover~.cursor{
     transform: scale(6);
+    box-shadow:0 0 20px white;
 
 }
 
