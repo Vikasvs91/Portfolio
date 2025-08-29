@@ -1,12 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
 }
- 
-
-
 body{
     color:whitesmoke;
     background-color:black;
@@ -19,43 +15,64 @@ html {
     scroll-behavior: smooth;
 }
 
-
-.h-div>ul ,.h-ol{
-    display: flex;
-    width: 570px;
-    list-style: none;
-    margin-left: 10%;
-    /* border: 2px solid white; */
-    
-}
-.h-div>ul {
-    margin-left: 100%;
-}
-.h-ol li {
-    padding: 0;
-    margin: 0;
-    /* border: 2px solid white; */
-}
-.h-ol :hover{
-    color: orangered;
-    text-shadow: 0px 0px 10px orangered ;
-    margin: 0px 0px 10px 0px;
-    transition: 0.6s;
-}
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%; 
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    background-color: black;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    /* border: 2px solid white; */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: black;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
+.h-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: orangered;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.h-ol a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.h-ol a:hover {
+  color: orangered;
+  text-shadow: 0px 0px 10px orangered;
+}
+
+/* Hamburger Button */
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+  display: none; /* hidden on desktop */
+}
+.menu-toggle.open i::before {
+  content: "\f00d"; /* Font Awesome close (X) icon */
+}
 a{
    text-decoration: none;
    position: sticky;
@@ -124,22 +141,50 @@ a{
 }
 .intro-item1-c{
     border: 1px ;
-    border-radius:20%;
+    border-radius:8px;
     padding: 15px;
     background-color: orangered;
     transition: transform 1s ;
 }
-.hoverintro{
+.hoverintro,.Resume{
     transition: transform 1s ;
+    color: orangered;
+    font-size: 20px;
 }
 .hoverintro:hover{
     transform: translateY(-10px);
     transition: transform 1s ;
+    color: black;
+
 }
 .intro-item1-c:hover{
     color: black;
-    
-    
+    transform: translateY(-10px);
+    transition: transform 1s ; 
+    background-color: orangered;    
+      
+}
+.Resume:hover{
+    transform: translateY(-10px);
+    transition: transform 1s ;
+}
+.download-resume-btn {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;  
+  padding: 10px;
+  background-color: orangered;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.download-resume-btn:hover {
+  background-color: orangered;
+  color: black;
 }
 .about{
     width: 12%;
@@ -371,8 +416,6 @@ a{
 .vikaspic:hover{
     transform: scale(1.05);
     opacity: 1s;
-    /* box-shadow: 0px 0px 20px whitesmoke; */
-    /* margin: 1px 2px 3px 4px ; */
     transition: transform 0.5s ease, opacity 0.5s ease;
 
 }
@@ -390,7 +433,7 @@ a{
   }
 .intro-item2:hover .overlay {
     height: 100%;
-    box-shadow: 0px 0px 20px orange;
+    box-shadow: 0 0 40px whitesmoke;
 }
 .text {
     color: white;
@@ -551,29 +594,27 @@ textarea {
 }
 
 @media (max-width: 768px) {
-    .header {
-       width: 50px;
-       height: 200px;
-       background-color:whitesmoke;
-       border-radius: 10px;
-       
-    }
-    .header:hover {
-        width: 100px;
-        height: auto;
-        /* color: wheat; */
-        background-color: black;
-    }
+    .nav-links {
+    position: absolute;
+    top: 70px; /* below header */
+    right: 5%;
+    background: black;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    display: none; /* hidden by default */
+  }
 
-    .h-div > ul, .h-ol {
-        display: grid;
-        margin-top: 10px; 
-        margin-right: 50%;
-        width: 0%; 
-    }
-    
+  .nav-links.active {
+    display: flex; /* shown when active */
+  }
 
-    
+  .menu-toggle {
+    display: block; /* show hamburger on mobile */
+  }
+   
 
     a {
         font-size: 18px; /* Smaller font size for mobile */
@@ -654,9 +695,3 @@ textarea {
         transform: scale(5); /* Scale cursor on hover */
     }
 }
-
-
-
-
-
-
